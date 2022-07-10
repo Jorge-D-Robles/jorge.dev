@@ -1,0 +1,346 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 18px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin: auto;
+  max-width: 1400px;
+  line-height: 2rem;
+  font-weight: 400;
+}
+small {
+  font-size: 14px;
+  color: rgb(83, 83, 83);
+}
+
+a {
+  color: rgb(0, 0, 255);
+  text-decoration: none;
+}
+nav a {
+  color: black;
+}
+a:hover {
+  color: rgb(116, 116, 252);
+}
+figure img {
+  width: 100%;
+}
+.portrait {
+  height: 450px;
+  width: auto;
+}
+figcaption {
+  font-size: small;
+  font-style: italic;
+}
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+figure a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+strong {
+  font-weight: 800;
+}
+.posts {
+  margin-left: 1rem;
+  list-style-type: disc;
+}
+.emphasis {
+  font-weight: 800;
+  font-style: italic;
+}
+/******************************************
+/* Code Blocks 
+/*******************************************/
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #393A34;
+    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    font-size: 0.95em;
+    line-height: 1.2em;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    background: #b3d4fc;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    border: 1px solid #dddddd;
+    background-color: white;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .2em;
+    padding-top: 1px; padding-bottom: 1px;
+    background: #f8f8f8;
+    border: 1px solid #dddddd;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #999988; font-style: italic;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.string,
+.token.attr-value {
+    color: #e3116c;
+}
+.token.punctuation,
+.token.operator {
+    color: #393A34; /* no highlight */
+}
+
+.token.entity,
+.token.url,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.variable,
+.token.constant,
+.token.property,
+.token.regex,
+.token.inserted {
+    color: #36acaa;
+}
+
+.token.atrule,
+.token.keyword,
+.token.attr-name,
+.language-autohotkey .token.selector {
+    color: #00a4db;
+}
+
+.token.function,
+.token.deleted,
+.language-autohotkey .token.tag {
+    color: #9a050f;
+}
+
+.token.tag,
+.token.selector,
+.language-autohotkey .token.keyword {
+    color: #00009f;
+}
+
+.token.important,
+.token.function,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+/******************************************
+/* HEADER
+/*******************************************/
+h1 {
+  font-size: 48px;
+  text-align: center;
+  margin: 2rem;
+}
+header h4 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+nav ul {
+  display: flex;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 14px;
+  justify-content: space-around;
+  border-bottom: 3px solid slategrey;
+  margin-bottom: 1rem;
+}
+
+/******************************************
+/* Main Content
+/*******************************************/
+.container {
+  display: flex;
+  flex: 1;
+  margin-top: 2rem;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right: 3%;
+  max-width: 75%;
+  margin-right: 3.6666%;
+  border-right: 1px dotted slategray;
+}
+.me {
+  font-size: 24px;
+  font-style: italic;
+
+  line-height: 2.5rem;
+  padding: 1rem 0;
+  border-top: 1px dotted slategray;
+}
+h3, h2 {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  gap: 1rem;
+  max-width: 25%;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.sidebar img {
+  border-radius: 200px 200px 200px 200px;
+  height: auto;
+  width: 200px;
+}
+.sidebar h5 {
+  font-weight: bold;
+}
+
+.social, .archive {
+  border-bottom: 2px solid slategray;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+.year, .month {
+  display: flex;
+  flex-direction: column;
+}
+.daily {
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  font-size: 14px;
+  font-style: italic;
+  margin-left: 1.5rem;
+  align-self: center;
+  list-style-type: disc;
+}
+
+
+/******************************************
+/* MOBILE
+/*******************************************/
+@media all and (max-width: 750px) {
+  body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+  }
+  h1 {
+    line-height: 1.2em;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main, .sidebar {
+    max-width: 100%;
+  }
+
+  .main {
+    border: none;
+    padding-bottom: 2.5rem;
+  }
+
+  .sidebar {
+    padding: 2rem;
+    border-top: 3px solid slategray;
+  }
+  .archive, .social {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  footer {
+    font-size: 12px;
+  }
+  body {
+    font-size: 20px;
+  }
+}
+/******************************************
+/* FOOTER
+/*******************************************/
+footer {
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-top: 3px solid slategrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
